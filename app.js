@@ -1,13 +1,13 @@
 var hours = ['10am: ', '11am: ', '12pm: ', '1pm: ', '2pm: ', '3pm: ', '4pm: ', '5pm: '];
-var sectionEl = document.getElementById("stores");
-var stores = []
+var tableEl = document.getElementById("stores");
+var stores = [];
 
 function StoreSales(location, minCust, maxCust, avg, list) {
   this.name = location;
   this.customerMin = minCust;
   this.customerMax = maxCust;
   this.avg = avg;
-  this.list = list;
+  this.row = list;
   this.bake = [];
   this.total = 0;
   console.log(this.name);
@@ -30,26 +30,27 @@ function StoreSales(location, minCust, maxCust, avg, list) {
   stores.push(this);
   
   this.render = function() {
-    var storeName = document.createElement("h2");
+    this.row = document.createElement("tr");
+    var storeName = document.createElement("th");
     storeName.textContent = this.name;
-    sectionEl.appendChild(storeName);
-    this.list = document.createElement("ul");
-    storeName.appendChild(this.list);
+    tableEl.appendChild(this.row);
+    this.row.appendChild(storeName)
+    
     for (var i = 0; i < hours.length; i++) {
-      var liCookies = document.createElement('li');
-      liCookies.textContent = hours[i] + this.bake[i];
-      this.list.appendChild(liCookies);
+      var tdCookies = document.createElement('td');
+      tdCookies.textContent = this.bake[i];
+      this.row.appendChild(tdCookies);
     };
     var liTotal = document.createElement('li');
-    liTotal.textContent = "Total: " + this.total;
-    this.list.appendChild(liTotal);
+    liTotal.textContent = this.total;
+    this.row.appendChild(liTotal);
   };
   
   this.render();
 };
 
-var pike = new StoreSales("Pike Place", 17, 88, 5.2, pikeList);
-var seaTac = new StoreSales("SeaTac", 8, 24, 1.2, seaTacList);
-var southcenter = new StoreSales("Southcenter", 11, 38, 1.9, southcenterList);
-var bellsquare = new StoreSales("Bellevue Square", 20, 48, 3.3, bellesquareList);
-var alki = new StoreSales("Alki", 3, 24, 2.6, alkiList);
+var pike = new StoreSales("Pike Place", 17, 88, 5.2, "pikeRow");
+var seaTac = new StoreSales("SeaTac", 8, 24, 1.2, "seaTacRow");
+var southcenter = new StoreSales("Southcenter", 11, 38, 1.9, "southcenterRow");
+var bellsquare = new StoreSales("Bellevue Square", 20, 48, 3.3, "bellesquareRow");
+var alki = new StoreSales("Alki", 3, 24, 2.6, "alkiRow");
