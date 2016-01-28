@@ -49,6 +49,22 @@ function StoreSales(location, minCust, maxCust, avg, list) {
   this.render();
 };
 
+var formEl = document.getElementById("form");
+formEl.addEventListener("submit", function(event) {
+  event.preventDefault();
+  console.log(event.target.storeLocal.value);
+  var newStore = event.target.storeLocal.value;
+  var newMin = event.target.minCustInput.value;
+  var newMax = event.target.maxCustInput.value;
+  var newAvg = event.target.avgInput.value;
+  var newRow = event.target.storeLocal.value + "Row";
+  new StoreSales(newStore, newMin, newMax, newAvg, newRow);
+  event.target.storeLocal.value = null;
+  event.target.minCustInput.value = null;
+  event.target.maxCustInput.value = null;
+  event.target.avgInput.value = null;
+});
+
 var pike = new StoreSales("Pike Place", 17, 88, 5.2, "pikeRow");
 var seaTac = new StoreSales("SeaTac", 8, 24, 1.2, "seaTacRow");
 var southcenter = new StoreSales("Southcenter", 11, 38, 1.9, "southcenterRow");
