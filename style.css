@@ -1,4 +1,38 @@
-table {
-  border: 2px solid;
+.header{
+  background-color: #26808D;
 }
-
+.slogan {
+  font-family : Niconne, sans-serif;
+  color : #E65F00;
+  padding: 1em
+}
+.logo {
+  height: 10em;
+}
+body{
+ background-color: #E7823B;
+}
+.textbody {
+  font-family: Gill Sans, sans-serif;
+  color: #027B8C
+}
+.text {
+  font-family: Palatino, serif;
+  font-color: #012B31;
+}
+.data {
+  font-family: Fjalla+One;
+  color: #3E2723;
+}
+.pallet4{
+  background-color: #263238;
+}
+.pallet3 {
+  background-color : #3E2723;
+}
+.pallet2 {
+ background-color:  #FFB74D;
+}
+.pallet1{
+  background-color: #69F0AE
+}
