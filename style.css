@@ -1,34 +1,63 @@
 
+.header{
+  background-color: #26808D;
+}
+.slogan {
+  font-family : Niconne, sans-serif;
+  font-size: 2em;
+  color : #E65F00;
+  padding : 0em, 1em;
+  text-align: center;
+}
+.Title{
+  font-family: Gill Sans, sans-serif;
+  font-weight: bold;
+  font-size: 3em;
+  color : #E65F00;
+  padding : 0em, 1em;
+  text-align: left;
+  margin:0em;
+}
 .logo {
-  font-family : Helvetica, sans-serif;
-  color : #FFB74D;
-  background-color: #69F0AE;
+  height: 10em;
 }
 body{
- background-color: #C57859;
+ background-color: #FF964B;
 
+}
+.locations {
+  float: left;
+  width: 200px;
 }
 .textbody {
   font-family: Gill Sans, sans-serif;
-  color: #FFB74D
+  color: #012B31;
+  max-width: 960px;
+  margin-left: 210px;
+}
+.links{
+  font-family: Gill Sans, sans-serif;
+  color: #012B31;
+  max-width: 960px;
+  margin: auto;
+  left: 200px;
 }
 .text {
+  list-style: none;
   font-family: Palatino, serif;
-  font-color: #263238;
+  color: #012B31;
 }
 .data {
+  background-color: #26808D;
   font-family: Fjalla+One;
   color: #3E2723;
 }
-.pallet4{
-  background-color: #263238;
+table {
+  text-align: center;
+  max-width: 960px;
+  margin-left: 200px;
 }
-.pallet3 {
-  background-color : #3E2723;
-}
-.pallet2 {
- background-color:  #FFB74D;
-}
-.pallet1{
-  background-color: #69F0AE
+a {
+  padding-left: 15px;
+  padding-right: 15px;
 }
